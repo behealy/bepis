@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.content {
+  opacity: 0;
+  transition: 500ms;
+  transform: translateY(100px);
+}
+
+.content.shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headerLinksWrapper {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
+.mainNavLink {
+  font-weight: 300;
+  padding: 10px 30px;
+}
+
+.mainNavLink.selected {
+  font-weight: 500;
+  color: #5a5a5a;
+}
