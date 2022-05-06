@@ -1,3 +1,8 @@
+:root {
+  --top-margin: 2rem;
+  --loud-pink: #ff57e5;
+}
+
 html,
 body {
   padding: 0;
@@ -40,7 +45,6 @@ iframe.experiment_frame {
 }
 
 header {
-  position: fixed;
   right: 0;
   left: 0;
   z-index: 100;
@@ -56,8 +60,11 @@ footer {
 }
 
 nav {
-  margin-top: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
   padding-right: 50px;
+  padding-top: var(--top-margin);
 }
 
 nav menu h1 {

@@ -18,7 +18,7 @@
     height: 18px;
     left: 0;
     right: 0;
-    background-color: #ff57e5;
+    background-color: var(--loud-pink);
     opacity: 0.7;
     z-index: -1;
     transform: translate(-120%, 5px);
