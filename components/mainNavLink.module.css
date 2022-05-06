@@ -1,0 +1,45 @@
+.mainNavLink {
+    font-weight: 400;
+    font-size: 14pt;
+    line-height: 14pt;
+}
+
+.mainNavLink.selected {
+    font-weight: 500;
+    color: white;
+}
+
+.nav_link_holder {
+    position: relative;
+}
+
+.nav_link_holder .main_nav_link_bg_block {
+    position: absolute;
+    height: 18px;
+    left: 0;
+    right: 0;
+    background-color: #ff57e5;
+    opacity: 0.7;
+    z-index: -1;
+    transform: translate(-120%, 5px);
+    transition: ease-in-out 0.25s;
+    /* border-bottom: rgb(140, 107, 0) 8px solid; */
+}
+
+.nav_link_holder:hover .main_nav_link_bg_block, 
+.main_nav_link_bg_block.selected  {
+    transform: translate(-20%, 5px);
+}
+
+.main_nav_link_bg_block.selected  {
+    opacity: 0.5;
+}
+
+.nav_bg_square {
+    background-color: #2366ff;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-35%, -50%) rotate(48deg);
+}

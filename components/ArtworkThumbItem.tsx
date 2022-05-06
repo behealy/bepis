@@ -20,20 +20,16 @@ export default function ArtworkThumbItem(props: Props) {
 			key={a._id}
 			style={{
 				position: 'relative',
-				display: 'inline-block',
 				// flex: 1,
-				border: 'white 2px solid',
+				border: 'black 2px solid',
 				width: '31%',
 				height: 0,
 				paddingBottom: '31%',
 				margin: `0  1.15%`,
 				cursor: 'pointer',
-				// width: width,
-				// height: width,
 				backgroundImage: `url(${a.preview})`,
 				backgroundSize: '100% 100%',
 				//    backgroundPosition: "50% 50%"
-				boxShadow: '2px 1px 5px #dadada',
 			}}
 		>
 			<picture
