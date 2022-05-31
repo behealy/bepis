@@ -1,5 +1,6 @@
 :root {
   --top-margin: 2rem;
+  --content-margin-left: 22rem;
   --loud-pink: #ff57e5;
 }
 
@@ -12,6 +13,10 @@ body {
   line-height: 1.6;
   font-size: 18px;
   background-color: white;
+}
+
+h1, h2, h3, figure {
+  margin: 0;
 }
 
 * {
@@ -60,10 +65,10 @@ footer {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
-  height: 100vh;
-  padding-right: 50px;
+  left: 0;
+  /* height: 100vh; */
   padding-top: var(--top-margin);
 }
 
@@ -81,7 +86,7 @@ nav menu {
   margin: 0;
   z-index: 2;
   margin-left: 1rem;
-  width: 350px;
+  width: 20rem;
   padding-bottom: 4rem;
 }
 

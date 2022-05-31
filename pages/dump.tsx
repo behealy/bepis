@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import ArtworkThumbItem from '../components/ArtworkThumbItem'
+import PageWrapper from '../components/PageWrapper';
 import { bepisArtworkDatasource, DisplayArtwork } from '../lib/artworks'
 
 type Props = {
@@ -8,17 +9,22 @@ type Props = {
 
 export default function Dump(props: Props) {
 	const { artworks } = props
-
 	return (
 		<>
 			<Head>
 				<title>{'Dump'}</title>
 			</Head>
-			<section>
+			<PageWrapper>
+				<div style={{
+					display: 'flex',
+
+				}}>
 				{artworks.map((a) => (
 					<ArtworkThumbItem artwork={a} />
 				))}
-			</section>
+				</div>
+				
+			</PageWrapper>
 		</>
 	)
 }

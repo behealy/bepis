@@ -20,7 +20,7 @@ export default function ArtworkThumbItem(props: Props) {
 			key={a._id}
 			style={{
 				position: 'relative',
-				// flex: 1,
+				flexWrap: 'wrap',
 				border: 'black 2px solid',
 				width: '31%',
 				height: 0,

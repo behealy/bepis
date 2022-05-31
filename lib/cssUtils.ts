@@ -10,7 +10,32 @@ function splitClasses(classes: string, styles: Map<string, string>) {
     return cl.reduce((p, c) => `${p} ${styles[c]}`, '')
 }
 
-
+/**
+ * 
+ * @param styles 
+ * @returns function
+ * 
+ * Usage: 
+ * 
+ * import styles from './someStyle.module.css'
+ * import { classListBuilder } from '../lib/cssUtils'
+ * 
+ * const classes = classListBuilder(styles);
+ * 
+ *  <a
+    href={ href }
+    className = {
+        classes({
+            if: isSelected == true,
+            then: 'someCssClass.selected',
+            else: 'someCssClass',
+        })
+    }
+>
+    { children }
+< /a>
+ * 
+ */
 export function classListBuilder(styles: any) {
     return (args: {
         if: boolean,

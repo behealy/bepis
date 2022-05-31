@@ -8,37 +8,6 @@ const name = 'Kimballs Laredo'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children }) {
-	const router = useRouter()
-
-	console.log(router)
-
-	const [currentKids, setCurrentKids] = useState()
-	const [showContent, setShowContent] = useState(false)
-
-	const contentClassList = useMemo(() => {
-		return showContent
-			? `${styles.content} ${styles.shown}`
-			: styles.content
-	}, [showContent])
-
-	useEffect(() => {
-		if (!currentKids) {
-			console.log('set current kids')
-			setCurrentKids(children)
-			setShowContent(true)
-		} else {
-			console.log('set next kids')
-			setShowContent(false)
-		}
-	}, [children, setShowContent])
-
-	const onAnimationComplete = useCallback(() => {
-		setCurrentKids(children)
-		setShowContent(true)
-	}, [setCurrentKids, setShowContent, children])
-
-	console.log(showContent)
-
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -91,7 +60,7 @@ export default function Layout({ children }) {
 						style={{
 							marginLeft: "1rem"
 						}}
-							width="350px"
+							width="20rem"
 							height="20"
 							version="1.1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -127,46 +96,12 @@ export default function Layout({ children }) {
 							/>
 						</svg>
 				</nav>
-				<main
-					onTransitionEnd={onAnimationComplete}
-					className={contentClassList}
-				>
-					{currentKids}
+				<main className={styles.content}>
+					{children}
 				</main>
 			</div>
 
 			<footer>
-				{/* <svg
-					width="100%"
-					height="30"
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					opacity={0.5}
-				>
-					<rect x="0" y="0%" width="100%" height="25%" fill="black" />
-					<rect
-						x="0"
-						y="25%"
-						width="100%"
-						height="25%"
-						fill="#ff57e5"
-					/>
-					<rect
-						x="0"
-						y="50%"
-						width="100%"
-						height="25%"
-						fill="#897633"
-					/>
-					<rect
-						x="0"
-						y="75%"
-						width="100%"
-						height="25%"
-						fill="#2366ff"
-					/>
-				</svg> */}
-
 				<svg
 					style={{
 						position: 'absolute',
