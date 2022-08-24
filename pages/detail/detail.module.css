@@ -1,0 +1,18 @@
+.content {
+    padding-top: var(--top-margin);
+    height: 100vh;
+    position: relative;
+    padding-right: 1rem;
+    /* background-color: black; */
+    /* border-left: black 1px solid; */
+    /* background-color: black; */
+}
+
+.main_image {
+    height: 80%;
+    min-height: 500px;
+    min-width: 500px;
+    /* margin: 0 auto; */
+    border: black 1px solid;
+    /* border-left: 0px; */
+}

@@ -39,6 +39,7 @@ class SanityDataSource {
 	private sq<R>(q: string): Promise<R> { return this.sanityClient.fetch<R>(q); }
 
 	private sanityToDisplay(a: SanityBepisArtwork): DisplayArtwork {
+		console.log(a.mainImages[0]);
 		return {
 			_id: a._id,
 			_slug: a._slug,
@@ -51,7 +52,6 @@ class SanityDataSource {
 
     async getArtworks(): Promise<DisplayArtwork[]> {
 		await this.initArtworks();
-		console.log(this.artworksBySlug);
 		return this.artworkSlugs.map(slug => {
 			return this.sanityToDisplay(this.getSArtBySlug(slug))
 		})

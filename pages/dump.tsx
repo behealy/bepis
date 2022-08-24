@@ -9,6 +9,7 @@ type Props = {
 
 export default function Dump(props: Props) {
 	const { artworks } = props
+
 	return (
 		<>
 			<Head>
@@ -17,7 +18,7 @@ export default function Dump(props: Props) {
 			<PageWrapper>
 				<div style={{
 					display: 'flex',
-
+					flexWrap: 'wrap'
 				}}>
 				{artworks.map((a) => (
 					<ArtworkThumbItem artwork={a} />

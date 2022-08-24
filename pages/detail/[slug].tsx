@@ -46,7 +46,7 @@ export default function ArtworkDetail(props: Props) {
 
 
 
-
+			
 
 			{/* </figure> */}
 

@@ -1,0 +1,11 @@
+.content {
+    opacity: 0;
+    transition: 500ms;
+    transform: translateY(100px);
+    padding-top: var(--top-margin);
+}
+
+.content.shown {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../anthropobro"
+		},
+		{
+			"path": "../../tut-serverless-api"
+		}
+	],
+	"settings": {}
+}
